@@ -1,0 +1,108 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#ffb6d9,#ffd1f7,#c9d6ff);
+    overflow:hidden;
+}
+
+.container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.card{
+    background:white;
+    width:400px;
+    padding:30px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 0 30px rgba(0,0,0,.2);
+    animation:float 3s ease-in-out infinite;
+}
+
+h1{
+    margin-bottom:20px;
+    color:hotpink;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:2px solid pink;
+    border-radius:12px;
+    font-size:16px;
+}
+
+button{
+    margin-top:15px;
+    padding:14px 25px;
+    border:none;
+    border-radius:12px;
+    background:hotpink;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:deeppink;
+    transform:scale(1.05);
+}
+
+.sparkle{
+    position:absolute;
+    width:10px;
+    height:10px;
+    background:gold;
+    border-radius:50%;
+    pointer-events:none;
+    animation:sparkleAnim 1s linear forwards;
+}
+
+@keyframes sparkleAnim{
+    from{
+        opacity:1;
+        transform:scale(1);
+    }
+    to{
+        opacity:0;
+        transform:translateY(-80px) scale(0);
+    }
+}
+
+@keyframes float{
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+.birthdayScene{
+    text-align:center;
+    color:white;
+}
+
+.cake{
+    font-size:120px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.cake:hover{
+    transform:scale(1.1);
+}
+
+.hidden{
+    display:none;
+}
